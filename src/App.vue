@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Jomblo App
+          Quasar App
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -75,21 +75,19 @@
     </q-drawer>
 
     <q-page-container>
-      <Employee/>
+      <HelloWorld />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import Employee from './components/Employee.vue'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    HelloWorld,
-    Employee
+    HelloWorld
   },
 
   data () {

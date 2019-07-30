@@ -39,16 +39,22 @@ export default {
     data () {
         return {
             employeeData: {},
-            totalEmployee; 0,
+            totalEmployee: 0,
             nameEmployee: 'sapi',
             firstDataOnly: [],
-            lastNameDataOnly: []
+            lastNameDataOnly: [],
+            param: {
+                "firstname": "iqbal",
+                "lastname": "Muhammad",
+                "email": "tapiiqbal@gmail.com",
+                "phone": "+62"
+            }
         }
     },
 
     methods: {
         getFirstNameOnly() {
-            con = self = this;
+            const self = this;
             employee.getEmployee(windows).then(function (datas) {
                 console.log('ini data nama depan', datas)
                 for (let i=0; i < datas.length; i++){
@@ -61,13 +67,22 @@ export default {
         },
 
         getLastNameOnly() {
-            con = self = this;
+            const self = this;
             employee.getEmployee(windows).then(function (datas) {
                 console.log('ini data nama depan', datas)
                 for (let i=0; i < datas.length; i++){
                     self.firstDataOnly.push(datas[i].lastname)
                 }
                 return datas;
+            }).catch(function (err){
+                console.log(err)
+            })
+        },
+
+        createNewEmployee() {
+            const self = this;
+            employee.submitNewEmployee(windows, self.param).then(function (result) {
+                return result;
             }).catch(function (err){
                 console.log(err)
             })

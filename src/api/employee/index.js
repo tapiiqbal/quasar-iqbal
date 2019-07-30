@@ -14,4 +14,13 @@ export default {
             console.log(err)
         })
     },
+    
+    getEmployee(window) {
+        return getApiNoAuth().get('Employees')
+        .then(function (response){
+            return response.data
+        }).catch(function(err){
+            console.log(err)
+        })
+    },
 }
