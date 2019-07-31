@@ -14,7 +14,7 @@ export default {
             console.log(err)
         })
     },
-    
+
     getEmployee(window) {
         return getApiNoAuth().get('Employees')
         .then(function (response){
@@ -22,5 +22,5 @@ export default {
         }).catch(function(err){
             console.log(err)
         })
-    },
+    }
 }

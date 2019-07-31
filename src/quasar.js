@@ -17,6 +17,10 @@ import {
   QItem,
   QItemSection,
   QItemLabel,
+  QInput,
+  QBtnDropdown,
+  QForm,
+  QSelect
 } from 'quasar'
 
 Vue.use(Quasar, {
@@ -35,6 +39,10 @@ Vue.use(Quasar, {
     QItem,
     QItemSection,
     QItemLabel,
+    QInput,
+    QBtnDropdown,
+    QForm,
+    QSelect
   },
   directives: {
   },

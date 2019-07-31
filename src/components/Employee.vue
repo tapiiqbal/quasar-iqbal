@@ -5,7 +5,7 @@
     <div class="row">
 
         <div class="col-sm-6">
-            <p>ini first name</p>
+            <p>ini first name</p    >
             <button class="danger" @click="getFirstNameOnly()">First Name</button>
             <div>
                 <p>{{firstNameDataOnly}}</p>
@@ -33,6 +33,8 @@ import employee from "../api/employee/index";
 import VMDateRangePicker from "v-md-date-range-picker";
 
 Vue.use(VMDateRangePicker);
+
+
 export default {
     name: 'Employee' ,
 
